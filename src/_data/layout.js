@@ -2,4 +2,4 @@
  * Define global layout
  */
 
-module.exports = "layout.liquid"
+module.exports = "default.liquid"

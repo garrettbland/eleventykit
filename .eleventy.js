@@ -1,11 +1,10 @@
-const path = require('path')
 const htmlmin = require('html-minifier')
 
 module.exports = function (eleventyConfig) {
     /**
      * Pass public folder to top level of dist
      */
-    eleventyConfig.addPassthroughCopy({'src/public' : '/'})
+    eleventyConfig.addPassthroughCopy({ 'public': '/' })
 
     /**
      * Minify HTML
@@ -29,6 +28,7 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: 'src/pages',
             includes: '../_includes',
+            layouts: '../_layouts',
             data: '../_data',
             output: 'dist',
         },

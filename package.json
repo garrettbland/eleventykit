@@ -8,6 +8,13 @@
       "@babel/preset-env"
     ]
   },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 70,
+    "tabWidth": 4
+  },
   "scripts": {
     "clean": "rimraf dist",
     "serve:eleventy": "npx @11ty/eleventy --serve",

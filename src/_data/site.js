@@ -1,4 +1,4 @@
-module.exports = function() {
+module.exports = function () {
     /**
      * Global site config
      * Access values with "site.[key]" globally
@@ -9,6 +9,6 @@ module.exports = function() {
         phone: '',
         email: '',
         address: '',
-        facebook: '',
+        facebook: ''
     }
 }

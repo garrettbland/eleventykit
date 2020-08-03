@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = (env) => {
     console.log(
         `📦 Running webpack in ${
-            env.production ? 'production' : 'development'
+        env.production ? 'production' : 'development'
         } mode`
     )
     return {
@@ -26,7 +26,17 @@ module.exports = (env) => {
                     use: [
                         MiniCssExtractPlugin.loader,
                         'css-loader',
-                        'postcss-loader',
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: [
+                                    require('tailwindcss'),
+                                    require('autoprefixer'),
+                                    require('cssnano'),
+                                ],
+                            },
+                        },
                     ],
                 },
             ],

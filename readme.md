@@ -49,7 +49,7 @@ Adding an icon is simple, just add in a `<i></i>` html element with the `data-fe
 
 ## Public Assets
 
-Everything in the `src/public` directory and subdirectories will be copied to the top level of `dist`. So for example, access `src/public/images/example.jpg` from the site looks like this.
+Everything in the `/public` directory and subdirectories will be copied to the top level of `dist`. So for example, access `public/images/example.jpg` from the site looks like this.
 
 ```html
 <img src="/images/example.jpg"/>
