@@ -10,7 +10,7 @@ import '../css/tailwind.css'
 import 'alpinejs'
 
 /**
- * Import feather icons, then run feather.replace()
+ * Import feather icons, then call feather.replace()
  * to replace any '<i data-feather="circle"></i>' elements
  * with the actual SVG
  */

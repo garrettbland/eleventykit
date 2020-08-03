@@ -16,6 +16,7 @@ It also includes some handy defaults already configured
 -   Minifies JS
 -   Minifies HTML
 -   Babel
+-   Global config & default global layout
 
 ## Getting Started
 
@@ -40,8 +41,16 @@ By default, all pages are located in `src/pages`. Add all of your pages or subdi
 
 ## Using Icons
 
-Adding an icon is simple, just add in a `<i></i>` html element with the `data-feather` attribute. Exmaple below.
+Adding an icon is simple, just add in a `<i></i>` html element with the `data-feather` attribute. Example below. By default Feather Icons are used.
 
 ```html
 <i data-feather="camera"></i>
+```
+
+## Public Assets
+
+Everything in the `src/public` directory and subdirectories will be copied to the top level of `dist`. So for example, access `src/public/images/example.jpg` from the site looks like this.
+
+```html
+<img src="/images/example.jpg"/>
 ```

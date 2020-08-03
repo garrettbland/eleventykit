@@ -1,10 +1,11 @@
+const path = require('path')
 const htmlmin = require('html-minifier')
 
 module.exports = function (eleventyConfig) {
     /**
-     * Pass images folder to dist
+     * Pass public folder to top level of dist
      */
-    eleventyConfig.addPassthroughCopy('src/images')
+    eleventyConfig.addPassthroughCopy({'src/public' : '/'})
 
     /**
      * Minify HTML
@@ -27,7 +28,8 @@ module.exports = function (eleventyConfig) {
         passthroughFileCopy: true,
         dir: {
             input: 'src/pages',
-            includes: '_includes',
+            includes: '../_includes',
+            data: '../_data',
             output: 'dist',
         },
     }
