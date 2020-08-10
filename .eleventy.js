@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
     /**
      * Pass public folder to top level of dist
      */
-    eleventyConfig.addPassthroughCopy({ 'public': '/' })
+    eleventyConfig.addPassthroughCopy({ public: '/' })
 
     /**
      * Minify HTML

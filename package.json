@@ -1,54 +1,43 @@
 {
-  "name": "eleventykit",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
-  "prettier": {
-    "semi": false,
-    "trailingComma": "es5",
-    "singleQuote": true,
-    "printWidth": 70,
-    "tabWidth": 4
-  },
-  "scripts": {
-    "clean": "rimraf dist",
-    "serve:eleventy": "npx @11ty/eleventy --serve",
-    "serve:webpack": "cross-env NODE_ENV=development webpack --env.development --mode development --watch",
-    "dev": "npm-run-all clean --parallel serve:*",
-    "build:eleventy": "npx @11ty/eleventy",
-    "build:webpack": "cross-env NODE_ENV=production webpack --env.production --mode production",
-    "build": "npm-run-all clean build:*"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "alpinejs": "^2.5.0",
-    "autoprefixer": "^9.8.5",
-    "babel-loader": "^8.1.0",
-    "cross-env": "^7.0.2",
-    "css-loader": "^4.1.0",
-    "cssnano": "^4.1.10",
-    "feather-icons": "^4.28.0",
-    "html-minifier": "^4.0.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-loader": "^3.0.0",
-    "style-loader": "^1.2.1",
-    "tailwindcss": "^1.6.0",
-    "webpack": "^4.44.0",
-    "webpack-cli": "^3.3.12"
-  },
-  "devDependencies": {
-    "prettier": "^2.0.5",
-    "rimraf": "^3.0.2"
-  }
+    "name": "eleventykit",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "clean": "rimraf dist",
+        "serve:eleventy": "npx @11ty/eleventy --serve",
+        "serve:parcel": "cross-env NODE_ENV=development parcel watch src/js/main.js --out-dir dist/assets",
+        "dev": "npm-run-all clean --parallel serve:*",
+        "build:eleventy": "npx @11ty/eleventy",
+        "build:parcel": "cross-env NODE_ENV=production parcel build ./src/js/main.js --out-dir dist/assets",
+        "build": "npm-run-all clean build:*"
+    },
+    "keywords": [],
+    "author": "Garrett Bland",
+    "license": "MIT",
+    "dependencies": {
+        "@11ty/eleventy": "^0.11.0",
+        "@babel/core": "^7.10.5",
+        "@babel/preset-env": "^7.10.4",
+        "alpinejs": "^2.5.0",
+        "autoprefixer": "^9.8.5",
+        "babel-loader": "^8.1.0",
+        "cross-env": "^7.0.2",
+        "css-loader": "^4.1.0",
+        "cssnano": "^4.1.10",
+        "feather-icons": "^4.28.0",
+        "html-minifier": "^4.0.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "npm-run-all": "^4.1.5",
+        "parcel-bundler": "^1.12.4",
+        "postcss-loader": "^3.0.0",
+        "style-loader": "^1.2.1",
+        "tailwindcss": "^1.6.0",
+        "webpack": "^4.44.0",
+        "webpack-cli": "^3.3.12"
+    },
+    "devDependencies": {
+        "prettier": "^2.0.5",
+        "rimraf": "^3.0.2"
+    }
 }

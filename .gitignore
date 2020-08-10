@@ -1,8 +1,14 @@
 # node
-node_modules
+node_modules/
 
 # MacOS
 .DS_Store
 
 # build directory
-dist
+dist/*
+
+# Parcel
+.cache/*
+
+# Misc
+*.log

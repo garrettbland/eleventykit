@@ -3,26 +3,23 @@ title: 'Eleventy Kit'
 ---
 
 
-        <div>
-            <h1 class="text-4xl font-black">{{ site.title }}</h1>
-            <p class="text-lg text-gray-700 underline">An eleventy starter kit</p>
-        </div>
-        <div>
-            <div x-data="{ open: false }">
-                <button @click="open = true">Open Dropdown</button>
+<div>
+    <h1 class="text-4xl font-black">{{ site.title }}</h1>
+    <p class="text-lg text-gray-700 underline">An eleventy starter kit</p>
+</div>
+<div>
+    <div x-data="{ open: false }">
+        <button @click="open = true">Open Dropdown</button>
 
-                <ul
-                    x-show="open"
-                    @click.away="open = false"
-                >
-                    Dropdown Body
-                </ul>
-            </div>
-        </div>
-        <div>
-            <div>Feather Icon</div>
-            <i data-feather="camera"></i>
-        </div>
-        <div>
-            <img src="/images/example.jpg"/>
-        </div>
+        <ul @click.away="open = false" x-show="open">
+            Dropdown Body
+        </ul>
+    </div>
+</div>
+<div>
+    <div>Feather Icon</div>
+    <i data-feather="camera"></i>
+</div>
+<div>
+    <img src="/images/example.jpg"/>
+</div>
