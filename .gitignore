@@ -5,10 +5,10 @@ node_modules/
 .DS_Store
 
 # build directory
-dist/*
+dist/
 
 # Parcel
-.cache/*
+.cache/
 
 # Misc
 *.log
