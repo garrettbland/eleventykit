@@ -29,7 +29,7 @@ It also includes some handy defaults already configured
 # Install dependencies
 npm install
 
-# Run locally (will start on localhost:8080 by default)
+# Run locally (will start on localhost:8080 by default). Eleventy will watch for file changes and live reload. Parcel will bundle js and watch for any js changes.
 npm run dev
 
 # Build for production (output will be in dist directory)
