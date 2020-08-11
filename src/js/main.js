@@ -2,7 +2,7 @@
  * Import our Tailwind CSS file with directives and any
  * custom css rules
  */
-import '../css/tailwind.css'
+import '../css/style.css'
 
 /**
  * Import Alpine JS
