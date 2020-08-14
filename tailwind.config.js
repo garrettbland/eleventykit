@@ -1,8 +1,6 @@
 module.exports = {
     purge: ['./src/**/*.liquid'],
-    theme: {
-        extend: {},
-    },
+    theme: {},
     variants: {},
     plugins: [],
 }
