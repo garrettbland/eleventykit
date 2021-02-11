@@ -16,3 +16,8 @@ import 'alpinejs'
  */
 import feather from 'feather-icons/dist/feather.js'
 feather.replace()
+
+/**
+ * Initiated...
+ */
+console.log('✅ js and css initialized...')

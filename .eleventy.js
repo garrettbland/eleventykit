@@ -9,10 +9,7 @@ module.exports = function (eleventyConfig) {
     /**
      * Minify HTML
      */
-    eleventyConfig.addTransform('htmlmin', function (
-        content,
-        outputPath
-    ) {
+    eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
         if (outputPath.endsWith('.html')) {
             let minified = htmlmin.minify(content, {
                 useShortDoctype: true,
@@ -28,7 +25,7 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: 'src/pages',
             includes: '../_includes',
-            layouts: '../_layouts',
+            layouts: '../_includes',
             data: '../_data',
             output: 'dist',
         },

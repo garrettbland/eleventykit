@@ -1,6 +1,12 @@
 module.exports = {
-    purge: ['./src/**/*.liquid'],
+    purge: {
+        mode: 'all',
+        content: ['./src/**/*.liquid'],
+        options: {
+            whitelist: [],
+        },
+    },
     theme: {},
     variants: {},
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
 }
