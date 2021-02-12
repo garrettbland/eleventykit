@@ -37,7 +37,6 @@
     "license": "MIT",
     "dependencies": {
         "@11ty/eleventy": "^0.11.1",
-        "@11ty/eleventy-img": "^0.7.8",
         "@babel/core": "^7.12.13",
         "@babel/preset-env": "^7.12.13",
         "@tailwindcss/postcss7-compat": "^2.0.3",
