@@ -1,11 +1,17 @@
 const htmlmin = require('html-minifier')
-const lazyloadimages = require('./plugins/lazyloadimages/.eleventy.js')
+const lazyloadimages = require('./plugins/lazy-load-images/.eleventy.js')
+const imagealttagcheck = require('./plugins/img-alt-tag-check/.eleventy.js')
 
 module.exports = function (eleventyConfig) {
     /**
      * Pass public folder to top level of dist
      */
     eleventyConfig.addPassthroughCopy({ public: '/' })
+
+    /**
+     * Validates that all images have an alt tag & value
+     */
+    eleventyConfig.addPlugin(imagealttagcheck)
 
     /**
      * Add native lazy loading to images
