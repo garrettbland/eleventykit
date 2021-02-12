@@ -1,8 +1,18 @@
 const htmlmin = require('html-minifier')
 const lazyloadimages = require('./plugins/lazy-load-images/.eleventy.js')
 const imagealttagcheck = require('./plugins/img-alt-tag-check/.eleventy.js')
+const ErrorOverlay = require('eleventy-plugin-error-overlay')
 
 module.exports = function (eleventyConfig) {
+    /**
+     * Setup nice overlay so we are foreced to fix errors
+     */
+    eleventyConfig.setBrowserSyncConfig({
+        ...eleventyConfig.browserSyncConfig,
+        // ...stuff
+    })
+    eleventyConfig.addPlugin(ErrorOverlay)
+
     /**
      * Pass public folder to top level of dist
      */

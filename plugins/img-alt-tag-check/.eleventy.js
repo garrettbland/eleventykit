@@ -2,7 +2,7 @@ const { JSDOM } = require('jsdom')
 
 module.exports = (eleventyConfig, options = {}) => {
     eleventyConfig.addTransform(
-        'lazyloadimages',
+        'img-alt-tag-check',
         (content, outputPath) => {
             if (outputPath.endsWith('.html')) {
                 const dom = new JSDOM(content)
@@ -15,8 +15,10 @@ module.exports = (eleventyConfig, options = {}) => {
                 images.forEach((image) => {
                     const alt_tag_value = image.getAttribute('alt')
                     if (!alt_tag_value) {
-                        throw new Error(
-                            `Missing \`alt\` from: ${outputPath}`
+                        throw Error(
+                            `Missing \`alt\` tag from: ${
+                                [...outputPath.split('/')][1]
+                            }`
                         )
                     }
                 })

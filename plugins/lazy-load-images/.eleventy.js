@@ -2,7 +2,7 @@ const { JSDOM } = require('jsdom')
 
 module.exports = (eleventyConfig, options = {}) => {
     eleventyConfig.addTransform(
-        'lazyloadimages',
+        'lazy-load-images',
         (content, outputPath) => {
             if (outputPath.endsWith('.html')) {
                 const dom = new JSDOM(content)

@@ -44,6 +44,7 @@
         "alpinejs": "^2.8.0",
         "autoprefixer": "^9.8.6",
         "cross-env": "^7.0.3",
+        "eleventy-plugin-error-overlay": "^0.1.2",
         "feather-icons": "^4.28.0",
         "html-minifier": "^4.0.0",
         "jsdom": "^16.4.0",
