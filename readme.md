@@ -18,6 +18,7 @@ It also includes some handy defaults already configured
 -   Converts javascript to es5 using Babel
 -   Global config & default global layout
 -   Removes comments from HTML
+-   Adds native lazy loading to images
 
 ## Getting Started
 

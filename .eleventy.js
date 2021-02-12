@@ -1,10 +1,16 @@
 const htmlmin = require('html-minifier')
+const lazyloadimages = require('./plugins/lazyloadimages/.eleventy.js')
 
 module.exports = function (eleventyConfig) {
     /**
      * Pass public folder to top level of dist
      */
     eleventyConfig.addPassthroughCopy({ public: '/' })
+
+    /**
+     * Add native lazy loading to images
+     */
+    eleventyConfig.addPlugin(lazyloadimages)
 
     /**
      * Minify HTML
