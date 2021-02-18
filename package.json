@@ -19,9 +19,10 @@
     },
     "scripts": {
         "clean": "rimraf dist",
+        "clear": "rimraf .cache",
         "serve:eleventy": "npx @11ty/eleventy --serve",
         "serve:parcel": "cross-env NODE_ENV=development parcel watch ./src/js/main.js --out-dir dist/assets",
-        "dev": "npm-run-all clean --parallel serve:*",
+        "dev": "npm-run-all clean clear --parallel serve:*",
         "build:eleventy": "npx @11ty/eleventy",
         "build:parcel": "cross-env NODE_ENV=production parcel build ./src/js/main.js --out-dir dist/assets",
         "build": "npm-run-all clean build:*"
