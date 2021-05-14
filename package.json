@@ -31,7 +31,6 @@
         "alpinejs": "^2.8.2",
         "autoprefixer": "^10.2.5",
         "clean-css-cli": "^5.3.0",
-        "cross-env": "^7.0.3",
         "eleventy-plugin-error-overlay": "^0.1.2",
         "html-minifier": "^4.0.0",
         "jsdom": "^16.4.0",
