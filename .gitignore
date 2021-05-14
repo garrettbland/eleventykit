@@ -7,6 +7,9 @@ node_modules/
 # build directory
 dist/
 
+# tmp directory
+tmp/
+
 # Parcel
 .cache/
 

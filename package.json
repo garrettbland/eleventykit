@@ -1,13 +1,7 @@
 {
     "name": "eleventykit",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
-    "main": "index.js",
-    "babel": {
-        "presets": [
-            "@babel/preset-env"
-        ]
-    },
     "prettier": {
         "semi": false,
         "trailingComma": "es5",
@@ -18,43 +12,33 @@
         "bracketSpacing": true
     },
     "scripts": {
-        "clean": "rimraf dist",
-        "clear": "rimraf .cache",
-        "serve:eleventy": "npx @11ty/eleventy --serve",
-        "serve:parcel": "cross-env NODE_ENV=development parcel watch ./src/js/main.js --out-dir dist/assets",
-        "dev": "npm-run-all clean clear --parallel serve:*",
-        "build:eleventy": "npx @11ty/eleventy",
-        "build:parcel": "cross-env NODE_ENV=production parcel build ./src/js/main.js --out-dir dist/assets",
-        "build": "npm-run-all clean build:*"
+        "dev": "rimraf dist && eleventy --serve & postcss src/css/tailwind.css --o tmp/style.css --watch",
+        "build": "rimraf dist && ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production postcss src/css/tailwind.css --o dist/style.css && cleancss dist/style.css -o dist/style.css && uglifyjs dist/alpine.js -o dist/alpine.js"
     },
     "keywords": [
         "eleventy",
         "alpinejs",
         "tailwindcss",
-        "static",
-        "parcel"
+        "static"
     ],
     "author": "Garrett Bland",
     "license": "MIT",
-    "dependencies": {
-        "@11ty/eleventy": "^0.11.1",
-        "@babel/core": "^7.12.13",
-        "@babel/preset-env": "^7.12.13",
-        "@tailwindcss/postcss7-compat": "^2.0.3",
+    "dependencies": {},
+    "devDependencies": {
+        "@11ty/eleventy": "^0.12.1",
+        "@tailwindcss/forms": "^0.3.2",
         "@tailwindcss/typography": "^0.4.0",
-        "alpinejs": "^2.8.0",
-        "autoprefixer": "^9.8.6",
+        "alpinejs": "^2.8.2",
+        "autoprefixer": "^10.2.5",
+        "clean-css-cli": "^5.3.0",
         "cross-env": "^7.0.3",
         "eleventy-plugin-error-overlay": "^0.1.2",
-        "feather-icons": "^4.28.0",
         "html-minifier": "^4.0.0",
         "jsdom": "^16.4.0",
-        "npm-run-all": "^4.1.5",
-        "parcel-bundler": "^1.12.4",
-        "postcss": "^7.0.35",
+        "postcss-cli": "^8.3.1",
         "prettier": "^2.2.1",
         "rimraf": "^3.0.2",
-        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
-    },
-    "devDependencies": {}
+        "tailwindcss": "^2.1.2",
+        "uglifyjs": "^2.4.11"
+    }
 }

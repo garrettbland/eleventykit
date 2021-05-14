@@ -1,6 +1,19 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
+    mode: 'jit',
     purge: ['./src/**/*.liquid'],
-    theme: {},
+    darkMode: false,
+    theme: {
+        extend: {
+            colors: {
+                ...colors,
+            },
+        },
+    },
     variants: {},
-    plugins: [require('@tailwindcss/typography')],
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+    ],
 }
