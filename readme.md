@@ -25,13 +25,13 @@ It also includes some handy defaults already configured
 # 2. Clone this repo to your local machine
 
 # Install dependencies
-yarn install
+npm run install
 
 # Run locally (will start on localhost:8080 by default).Eleventy will watch for file changes and live reload
-yarn dev
+npm run dev
 
 # Build for production (output will be in dist directory)
-yarn build
+npm run build
 ```
 
 ## Adding pages
