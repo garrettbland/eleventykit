@@ -6,6 +6,7 @@
     <body>
         {{ content }}
         <!-- Alpine JS File -->
-        <script src="/alpine.js?v={% version %}"></script>
+        {% comment %} <script src="/alpine.js?v={% version %}"></script> {% endcomment %}
+        <script type="module" src="/js/index.js?v={% version %}"></script>
     </body>
 </html>
