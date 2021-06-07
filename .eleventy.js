@@ -1,6 +1,6 @@
 const htmlmin = require('html-minifier')
-const lazyloadimages = require('./plugins/lazy-load-images/.eleventy.js')
-const imagealttagcheck = require('./plugins/img-alt-tag-check/.eleventy.js')
+const lazyloadimages = require('@garrettbland/lazy-load-images')
+const imagealttagcheck = require('@garrettbland/img-alt-tag-check')
 const ErrorOverlay = require('eleventy-plugin-error-overlay')
 
 const now = String(Date.now())
