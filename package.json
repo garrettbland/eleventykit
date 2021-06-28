@@ -13,7 +13,7 @@
     },
     "scripts": {
         "dev": "rimraf dist && npx @11ty/eleventy --serve & npx tailwindcss -i src/css/tailwind.css -o dist/style.css -w",
-        "build": "rimraf dist && ELEVENTY_PRODUCTION=true @11ty/eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -o dist/style.css --minify"
+        "build": "rimraf dist && ELEVENTY_PRODUCTION=true npx @11ty/eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -o dist/style.css --minify"
     },
     "keywords": [
         "eleventy",
