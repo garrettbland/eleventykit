@@ -1,7 +1,7 @@
 {
     "name": "eleventykit",
-    "version": "1.0.2",
-    "description": "",
+    "version": "1.0.3",
+    "description": "A static website starter kit for the modern web",
     "prettier": {
         "semi": false,
         "trailingComma": "es5",
@@ -12,8 +12,8 @@
         "bracketSpacing": true
     },
     "scripts": {
-        "dev": "rimraf dist && eleventy --serve & npx tailwindcss -i src/css/tailwind.css -o dist/style.css -w",
-        "build": "rimraf dist && ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -o dist/style.css --minify"
+        "dev": "rimraf dist && npx @11ty/eleventy --serve & npx tailwindcss -i src/css/tailwind.css -o dist/style.css -w",
+        "build": "rimraf dist && ELEVENTY_PRODUCTION=true @11ty/eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -o dist/style.css --minify"
     },
     "keywords": [
         "eleventy",
@@ -29,12 +29,12 @@
         "@garrettbland/lazy-load-images": "^0.0.6",
         "@tailwindcss/forms": "^0.3.3",
         "@tailwindcss/typography": "^0.4.1",
-        "alpinejs": "^3.0.6",
+        "alpinejs": "^3.1.1",
         "eleventy-plugin-error-overlay": "^0.1.2",
         "html-minifier": "^4.0.0",
         "jsdom": "^16.6.0",
-        "prettier": "^2.3.1",
+        "prettier": "^2.3.2",
         "rimraf": "^3.0.2",
-        "tailwindcss": "^2.2.0"
+        "tailwindcss": "^2.2.4"
     }
 }

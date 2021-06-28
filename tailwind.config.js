@@ -9,6 +9,9 @@ module.exports = {
             colors: {
                 ...colors,
             },
+            fontFamily: {
+                sans: ['"Inter"'],
+            },
         },
     },
     variants: {},
