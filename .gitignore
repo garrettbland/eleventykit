@@ -12,3 +12,7 @@ dist/
 
 # Misc
 *.log
+
+# Serverless
+netlify/functions/onrequest/*
+!netlify/functions/onrequest/index.js

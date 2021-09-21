@@ -1,4 +1,11 @@
 [build]
-  publish = "dist"
-  command = "npm run build"
-  skip_processing = true
+publish = "dist"
+command = "npm run build"
+skip_processing = true
+
+[[redirects]]
+from = "/serverless/"
+to = "/.netlify/functions/onrequest"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "onrequest"

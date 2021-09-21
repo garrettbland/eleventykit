@@ -2,10 +2,19 @@ const htmlmin = require('html-minifier')
 const lazyloadimages = require('@garrettbland/lazy-load-images')
 const imagealttagcheck = require('@garrettbland/img-alt-tag-check')
 const ErrorOverlay = require('eleventy-plugin-error-overlay')
+const { EleventyServerlessBundlerPlugin } = require('@11ty/eleventy')
 
 const now = Date.now().toString()
 
 module.exports = function (eleventyConfig) {
+    /**
+     * Testing out serverless
+     */
+    eleventyConfig.addPlugin(EleventyServerlessBundlerPlugin, {
+        name: 'onrequest', // The serverless function name from your permalink object
+        functionsDir: './netlify/functions/',
+    })
+
     /**
      * Setup nice overlay so we are foreced to fix errors
      */
