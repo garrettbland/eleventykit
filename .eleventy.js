@@ -3,7 +3,7 @@ const lazyloadimages = require('@garrettbland/lazy-load-images')
 const imagealttagcheck = require('@garrettbland/img-alt-tag-check')
 const ErrorOverlay = require('eleventy-plugin-error-overlay')
 
-const now = String(Date.now())
+const now = Date.now().toString()
 
 module.exports = function (eleventyConfig) {
     /**
@@ -29,7 +29,8 @@ module.exports = function (eleventyConfig) {
     })
 
     /**
-     * Lets us use version in our site
+     * Add version shortcode to version and cache bust our stylesheet and
+     * javascript packages
      */
     eleventyConfig.addShortcode('version', function () {
         return now

@@ -1,6 +1,6 @@
 {
     "name": "eleventykit",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A static website starter kit for the modern web",
     "prettier": {
         "semi": false,
@@ -29,12 +29,11 @@
         "@garrettbland/lazy-load-images": "^0.0.6",
         "@tailwindcss/forms": "^0.3.3",
         "@tailwindcss/typography": "^0.4.1",
-        "alpinejs": "^3.1.1",
+        "alpinejs": "^3.4.0",
         "eleventy-plugin-error-overlay": "^0.1.2",
         "html-minifier": "^4.0.0",
-        "jsdom": "^16.6.0",
-        "prettier": "^2.3.2",
+        "prettier": "^2.4.1",
         "rimraf": "^3.0.2",
-        "tailwindcss": "^2.2.4"
+        "tailwindcss": "^2.2.15"
     }
 }
