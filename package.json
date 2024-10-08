@@ -1,6 +1,6 @@
 {
     "name": "eleventykit",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A static website starter kit for the modern web",
     "prettier": {
         "semi": false,
@@ -24,16 +24,14 @@
     "author": "Garrett Bland",
     "license": "MIT",
     "devDependencies": {
-        "@11ty/eleventy": "^0.12.1",
-        "@garrettbland/img-alt-tag-check": "^0.0.4",
-        "@garrettbland/lazy-load-images": "^0.0.6",
-        "@tailwindcss/forms": "^0.3.3",
-        "@tailwindcss/typography": "^0.4.1",
-        "alpinejs": "^3.4.0",
-        "eleventy-plugin-error-overlay": "^0.1.2",
+        "@11ty/eleventy": "^2.0.1",
+        "@tailwindcss/forms": "^0.5.7",
+        "@tailwindcss/typography": "^0.5.13",
+        "alpinejs": "^3.14.1",
         "html-minifier": "^4.0.0",
+        "markdown-it": "^14.1.0",
         "prettier": "^2.4.1",
         "rimraf": "^3.0.2",
-        "tailwindcss": "^2.2.15"
+        "tailwindcss": "^3.4.4"
     }
 }

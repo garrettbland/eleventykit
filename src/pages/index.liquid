@@ -8,160 +8,184 @@ description: 'A static website starter kit for the modern web'
 
 <!-- Custom CSS for shape divider & fonts. Provided by shapedivider.app -->
 <style>
-    * {
-        font-family: 'Inter', sans-serif;
-    }
+  * {
+    font-family: 'Inter'
+    , sans-serif;
+  }
 
-    .custom-shape-divider-bottom-1597105216 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-    }
+  .custom-shape-divider-bottom-1597105216 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
 
-    .custom-shape-divider-bottom-1597105216 svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 117px;
-        transform: rotateY(180deg);
-    }
+  .custom-shape-divider-bottom-1597105216 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 117px;
+    transform: rotateY(180deg);
+  }
 
-    .custom-shape-divider-bottom-1597105216 .shape-fill {
-        fill: #ffffff;
-    }
+  .custom-shape-divider-bottom-1597105216 .shape-fill {
+    fill: #ffffff;
+  }
 </style>
 
 <section class="relative" style="background: rgb(42, 67, 96);background: linear-gradient(90deg,rgba(42, 67, 96, 1) 0%,rgba(44, 82, 130, 1) 100%);">
-    <div class="max-w-2xl mx-auto pb-48 pt-24 text-center px-4 md:px-0">
-        <h1 class="text-5xl text-white leading-relaxed font-bold">
-            <span style="text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2)">Eleventy</span>
-            <span class="bg-gradient-to-br from-purple-500 to-pink-700 rounded-lg px-1 shadow-md">Kit</span>
-        </h1>
-        <p class="text-2xl text-white opacity-75 antialiased font-light">
-            {{ description }}
-        </p>
-    </div>
-    <div class="custom-shape-divider-bottom-1597105216">
-        <svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-            <path class="shape-fill" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
-            <path class="shape-fill" d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
-            <path class="shape-fill" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
-        </svg>
-    </div>
+  <div class="max-w-2xl mx-auto pb-48 pt-24 text-center px-4 md:px-0">
+    <h1 class="text-5xl text-white leading-relaxed font-bold">
+      <span style="text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2)">Eleventy</span>
+      <span class="bg-gradient-to-br from-purple-500 to-pink-700 rounded-lg px-1 shadow-md">Kit</span>
+    </h1>
+    <p class="text-2xl text-white opacity-75 antialiased font-light">
+      {{ description }}
+    </p>
+  </div>
+  <div class="custom-shape-divider-bottom-1597105216">
+    <svg
+      data-name="Layer 1"
+      preserveaspectratio="none"
+      viewbox="0 0 1200 120"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        class="shape-fill"
+        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+        opacity=".25"></path>
+      <path
+        class="shape-fill"
+        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+        opacity=".5"></path>
+      <path class="shape-fill" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+    </svg>
+  </div>
 </section>
 
 <section class="pt-16">
-    <div class="max-w-2xl mx-auto px-4 md:px-0">
-        <h2 class="font-bold text-xl mb-2">
-            What is Eleventy Kit? 🤔
-        </h2>
-        <p class="font-light text-lg text-gray-700 mb-4">
-            Eleventy Kit is a static website starter kit with some
+  <div class="max-w-2xl mx-auto px-4 md:px-0">
+    <h2 class="font-bold text-xl mb-2">
+      What is Eleventy Kit? 🤔
+    </h2>
+    <p class="font-light text-lg text-gray-700 mb-4">
+      Eleventy Kit is a static website starter kit with some 
             popular technologies and an opinionated setup. Its purpose
             is to give you a head start for your next static website
             so you can dive into development quicker.
-        </p>
-    </div>
+    </p>
+  </div>
 </section>
 
-<section class="pt-12" x-data="{ open: false}" x-on:keydown.escape="open = false">
-    <!-- MODAL -->
-    <div class="fixed top-0 inset-x-0 w-full h-full z-40 flex items-center justify-center bg-black bg-opacity-50" x-show="open" x-transition.opacity>
-        <div class="bg-white max-w-2xl p-5 rounded-lg shadow text-center" x-on:click.away="open = false" x-show="open" x-transition.scale>
-            <div class="text-lg">Modal Example</div>
-            <button class="transform hover:rotate-90 duration-150 ease-in-out hover:scale-150" x-on:click="open = false">
-                <i data-feather="x"></i>
-            </button>
-        </div>
+<section
+  class="pt-12"
+  x-data="{ open: false}"
+  x-on:keydown.escape="open = false">
+  <!-- MODAL -->
+  <div
+    class="fixed top-0 inset-x-0 w-full h-full z-40 flex items-center justify-center bg-black bg-opacity-50"
+    x-show="open"
+    x-transition.opacity>
+    <div
+      class="bg-white max-w-2xl p-5 rounded-lg shadow text-center"
+      x-on:click.away="open = false"
+      x-show="open"
+      x-transition.scale>
+      <div class="text-lg">Modal Example</div>
+      <button class="transform hover:rotate-90 duration-150 ease-in-out hover:scale-150" x-on:click="open = false">
+        <i data-feather="x"></i>
+      </button>
     </div>
-    <!-- MODAL END -->
+  </div>
+  <!-- MODAL END -->
 
-    <div class="max-w-2xl mx-auto px-4 md:px-0">
-        <h2 class="font-bold text-xl mb-2">Features ✨</h2>
-        <p class="font-light text-lg text-gray-700 mb-4">
-            The biggest inspiration for Eleventy Kit was to quickly
+  <div class="max-w-2xl mx-auto px-4 md:px-0">
+    <h2 class="font-bold text-xl mb-2">Features ✨</h2>
+    <p class="font-light text-lg text-gray-700 mb-4">
+      The biggest inspiration for Eleventy Kit was to quickly 
             fire up a site with modern defaults, without messing with
             configs or bundlers.
-        </p>
-        <div class="mb-4">
-            <ul class="space-y-2">
-                <li class="font-light text-gray-800">🚀 Eleventy</li>
-                <li class="font-light text-gray-800">
-                    💅 TailwindCSS
-                </li>
-                <li class="font-light text-gray-800">
-                    🛠 Alpine JS
-                    <button class="font-light text-sm uppercase text-blue-500 hover:underline" x-on:click="open = true">
-                        Click here to open example modal
-                    </button>
-                </li>
-                <li class="font-light text-gray-800">
-                    🚫 Zero Config
-                </li>
-            </ul>
-        </div>
+    </p>
+    <div class="mb-4">
+      <ul class="space-y-2">
+        <li class="font-light text-gray-800">🚀 Eleventy</li>
+        <li class="font-light text-gray-800">
+          💅 TailwindCSS
+        </li>
+        <li class="font-light text-gray-800">
+          🛠 Alpine JS
+          <button class="font-light text-sm uppercase text-blue-500 hover:underline" x-on:click="open = true">
+            Click here to open example modal
+          </button>
+        </li>
+        <li class="font-light text-gray-800">
+          🚫 Zero Config
+        </li>
+      </ul>
     </div>
+  </div>
 </section>
 
 <section class="pt-12">
-    <div class="max-w-2xl mx-auto px-4 md:px-0">
-        <h2 class="font-bold text-xl mb-2">Bonus Goodies 💥</h2>
-        <p class="font-light text-lg text-gray-700 mb-4">
-            When you build your site for production, its setup for the
+  <div class="max-w-2xl mx-auto px-4 md:px-0">
+    <h2 class="font-bold text-xl mb-2">Bonus Goodies 💥</h2>
+    <p class="font-light text-lg text-gray-700 mb-4">
+      When you build your site for production, its setup for the 
             fastest user experience right out of the box.
-        </p>
-        <div class="mb-4">
-            <ul class="space-y-2">
-                <li class="font-light text-gray-800">
-                    ✅ Live Browser Reload
-                </li>
-                <li class="font-light text-gray-800">
-                    ✅ Minfies & removes unused css styles
-                </li>
-                <li class="font-light text-gray-800">
-                    ✅ Minified production build of Alpine JS
-                </li>
-                <li class="font-light text-gray-800">
-                    ✅ Minifes HTML
-                </li>
-                <li class="font-light text-gray-800">
-                    ✅ Adds native lazy loading to images & validates
-                    <span class="font-mono">alt</span>
-                    tag
-                </li>
-            </ul>
-        </div>
+    </p>
+    <div class="mb-4">
+      <ul class="space-y-2">
+        <li class="font-light text-gray-800">
+          ✅ Live Browser Reload
+        </li>
+        <li class="font-light text-gray-800">
+          ✅ Minfies & removes unused css styles
+        </li>
+        <li class="font-light text-gray-800">
+          ✅ Minified production build of Alpine JS
+        </li>
+        <li class="font-light text-gray-800">
+          ✅ Minifes HTML
+        </li>
+        <li class="font-light text-gray-800">
+          ✅ Adds native lazy loading to images & validates
+          <span class="font-mono">alt</span>
+          tag
+        </li>
+      </ul>
     </div>
+  </div>
 </section>
 
 <section class="pt-12 mb-24">
-    <div class="max-w-2xl mx-auto px-4 md:px-0">
-        <h2 class="font-bold text-xl mb-2">How to get started</h2>
-        <p class="font-light text-lg text-gray-700 mb-4">
-            There are a few ways to get started. Easiest way is to
+  <div class="max-w-2xl mx-auto px-4 md:px-0">
+    <h2 class="font-bold text-xl mb-2">How to get started</h2>
+    <p class="font-light text-lg text-gray-700 mb-4">
+      There are a few ways to get started. Easiest way is to 
             click 'Use this template' below. This will create a new
             github repo in your account.
-        </p>
-        <a class="inline-block mb-12 px-4 py-2 rounded-lg font-medium bg-gradient-to-b from-green-500 to-green-600 border border-green-600 text-white hover:from-green-600 transform translate duration-150 ease-in-out" href="https://github.com/garrettbland/eleventykit/generate" target="_blank">
-            Use this template
-        </a>
-        <p class="font-light text-lg text-gray-700 mb-4">
-            Or if you prefer not to create a new repo and want to play
+    </p>
+    <a
+      class="inline-block mb-12 px-4 py-2 rounded-lg font-medium bg-gradient-to-b from-green-500 to-green-600 border border-green-600 text-white hover:from-green-600 transform translate duration-150 ease-in-out"
+      href="https://github.com/garrettbland/eleventykit/generate"
+      target="_blank">
+      Use this template
+    </a>
+    <p class="font-light text-lg text-gray-700 mb-4">
+      Or if you prefer not to create a new repo and want to play 
             around, clone it locally.
-            <a class="text-blue-500 hover:underline font-light italic" href="https://github.com/garrettbland/eleventykit">Click here to take a peek at the public repo</a>
-        </p>
-        <div class="overflow-x-scroll whitespace-no-wrap font-light font-mono p-3 rounded-lg bg-gray-800 text-white">
-            git clone https://github.com/garrettbland/eleventykit.git
-        </div>
+      <a class="text-blue-500 hover:underline font-light italic" href="https://github.com/garrettbland/eleventykit">Click here to take a peek at the public repo</a>
+    </p>
+    <div class="overflow-x-scroll whitespace-no-wrap font-light font-mono p-3 rounded-lg bg-gray-800 text-white">
+      git clone https://github.com/garrettbland/eleventykit.git
     </div>
+  </div>
 </section>
 
 <section class="py-24">
-    <div class="max-w-2xl mx-auto">
-        <img alt="buffalo image" src="/images/example.jpg" />
-    </div>
+  <div class="max-w-2xl mx-auto">
+    <img alt="buffalo image" src="/images/example.jpg" />
+  </div>
 </section>
